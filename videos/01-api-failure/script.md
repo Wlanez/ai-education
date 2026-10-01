@@ -36,6 +36,14 @@ A log line by itself may not be enough. If the team has no alert, no queue view,
 
 This is our business failure: the order submission did not reach the service, and the workflow needs a clear recovery path.
 
+## What the response can tell us
+
+Before changing anything, separate three states: request sent, request accepted, and order fulfilled. They are different. A network call may finish while the response says the service did not accept the work.
+
+A successful response may confirm only that another system received the request. It does not always prove that a person or a later process completed the order. This demo measures accepted_orders because that is the boundary it can observe. In a real workflow, you may need a later fulfillment event or a reconciliation check to confirm the full business outcome.
+
+We also need to decide when to retry. This example retries only HTTP 503, a temporary service error. A 400 means something about the request is invalid; repeating the same request will not correct it. Other statuses, such as a rate limit, need a policy based on the receiving service's guidance. We keep this episode focused on one status.
+
 ## Add a bounded control
 
 [SCREEN: Show the retry function and highlight max_attempts=3, the HTTP 503 check, and the order idempotency key.]

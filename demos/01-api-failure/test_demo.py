@@ -55,5 +55,32 @@ class FailureFirstDemoTests(unittest.TestCase):
         self.assertEqual(output["transient_503"]["attempts"], 2)
         self.assertEqual(output["persistent_503"]["workflow_status"], "pending_review")
 
+
+    def test_script_is_long_enough_for_six_minutes_at_a_measured_pace(self):
+        from pathlib import Path
+        import re
+        repo_root = Path(__file__).resolve().parents[2]
+        script = (repo_root / "videos/01-api-failure/script.md").read_text()
+        narration = " ".join(line for line in script.splitlines()
+                             if not line.startswith("#") and not line.startswith("**")
+                             and not line.startswith("[SCREEN:"))
+        spoken_words = re.findall(r"\b[\w’'-]+\b", narration)
+        self.assertGreaterEqual(len(spoken_words), 850,
+                                f"Expected at least 850 spoken words, got {len(spoken_words)}")
+
+    def test_reviewed_briefs_state_concrete_business_consequences(self):
+        from pathlib import Path
+        repo_root = Path(__file__).resolve().parents[2]
+        expectations = {
+            "videos/03-webhook-processing-loss/brief.md": "fulfillment request is never created",
+            "videos/05-agent-authorization-boundary/brief.md": "invoice total and billing address",
+            "videos/09-investigation-logs/brief.md": "wrong delivery status",
+            "videos/12-preproduction-reliability-review/brief.md": "two customers for one available slot",
+        }
+        for relative_path, phrase in expectations.items():
+            with self.subTest(path=relative_path):
+                self.assertIn(phrase, (repo_root / relative_path).read_text())
+
 if __name__ == "__main__":
     unittest.main()
+
