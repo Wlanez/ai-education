@@ -34,7 +34,6 @@
 
 ## File Structure
 
-- Create `README.md`: channel purpose, positioning, failure-first method, paths into the repo, and the single qualified-conversation CTA.
 - Create `strategy/positioning.md`: positioning, audience, exclusions, proof boundaries, and language principles.
 - Create `strategy/ideal-client.md`: target-company profile and observable qualifying signals.
 - Create `strategy/offer-and-cta.md`: review conversation, fixed-scope reliability review, deliverables, and CTA wording.
@@ -50,7 +49,6 @@
 ## Task 1: Establish the Commercial and Editorial Foundation
 
 **Files:**
-- Create: `README.md`
 - Create: `strategy/positioning.md`
 - Create: `strategy/ideal-client.md`
 - Create: `strategy/offer-and-cta.md`
@@ -72,18 +70,16 @@
 - [ ] **Step 4: Define weekly workflow**
   Specify selection, brief gate, deterministic demo, script/rehearsal, recording, publication, Short and LinkedIn derivative, scorecard update, and roadmap feedback.
 
-- [ ] **Step 5: Write the repo README**
-  Summarize the business problem, failure-first method, entry points to strategy/videos/demos/metrics, and CTA. Verify linked paths exist.
-
-- [ ] **Step 6: Review foundation for contradictions**
+- [ ] **Step 5: Review foundation for contradictions**
   Check all five strategy files against the spec. Verify that views are secondary, English is the primary video language, the CTA is consistent, and unsupported claims or pricing commitments were not introduced.
 
-- [ ] **Step 7: Commit the foundation**
+- [ ] **Step 6: Commit the foundation**
   `git add README.md strategy && git commit -m "docs: establish failure-first content strategy"`
 
 ## Task 2: Add the Reusable Brief, 90-Day Roadmap, Demo Guide, and Scorecard
 
 **Files:**
+- Create: `README.md`
 - Create: `templates/video-brief-template.md`
 - Create: `videos/roadmap.md`
 - Create: `demos/README.md`
@@ -105,10 +101,13 @@
 - [ ] **Step 4: Create the scorecard**
   Provide one row per video and fields for publication date, long-form/Short/LinkedIn links, qualified conversations, calls, review requests, paid diagnostics, repair/implementation opportunities, and notes. Keep views and retention as supporting indicators.
 
-- [ ] **Step 5: Validate completeness**
+- [ ] **Step 5: Write the repo README**
+  Summarize the business problem, failure-first method, entry points to strategy/videos/demos/metrics, and CTA. Verify every linked path exists now that this task creates the roadmap, demo guide, and scorecard.
+
+- [ ] **Step 6: Validate completeness**
   Check the 12 items and order against the spec. Verify each brief-template field has a matching scorecard or production artifact where applicable; ensure blank metrics are clearly distinguishable from zero.
 
-- [ ] **Step 6: Commit the operating system**
+- [ ] **Step 7: Commit the operating system**
   `git add templates videos/roadmap.md demos/README.md metrics/scorecard.md && git commit -m "docs: add content workflow and measurement"`
 
 ## Task 3: Build the First Repeatable Case — Essential API Returns HTTP 503
