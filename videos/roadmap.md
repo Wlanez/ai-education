@@ -4,7 +4,7 @@ Publish one long-form video each week. The order starts with familiar operationa
 
 | # | Video | Working folder | Status | Long-form | Short | LinkedIn | Published / reviewed |
 |---|---|---|---|---|---|---|---|
-| 01 | Essential API returns HTTP 503 | [01-api-failure](01-api-failure/brief.md) | Not started | — | — | — | — |
+| 01 | Essential API returns HTTP 503 | [01-api-failure](01-api-failure/brief.md) | Script | — | — | — | — |
 | 02 | Duplicate leads enter the CRM | [02-duplicate-crm-leads](02-duplicate-crm-leads/brief.md) | Not started | — | — | — | — |
 | 03 | Webhook is received but processing is lost | [03-webhook-processing-loss](03-webhook-processing-loss/brief.md) | Not started | — | — | — | — |
 | 04 | Automation invoices the same transaction twice | [04-duplicate-invoice](04-duplicate-invoice/brief.md) | Not started | — | — | — | — |
