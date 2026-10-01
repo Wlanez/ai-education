@@ -1,5 +1,7 @@
 # Content and Commercial Scorecard
 
+Use the [90-day review template](review-template.md) after outcomes have been measured. The template is intentionally blank until there is season data.
+
 Use one row per roadmap video. Update only after an outcome is measured. “—” means not yet measured or not yet available; “0” means measured and zero. Do not invent attribution. Use notes for a short source/context reference without storing sensitive buyer details.
 
 | # | Video | Published date | YouTube long-form | Short | LinkedIn | Qualified conversations | Calls | Review requests | Paid diagnostics | Repair / implementation opportunities | Views (supporting) | Retention (supporting) | Notes / attribution |
